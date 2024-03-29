@@ -1,0 +1,141 @@
+#cevap_1
+for i in range(1,11):
+    print(i)
+
+
+#cevap_2
+#for_dongusu
+sayi = int(input("Bir sayı girin: "))
+
+print("Çift sayılar (for ile):")
+for i in range(2, sayi + 1, 2):
+    print(i)
+
+#while_dongusu
+sayi = int(input("Bir sayı girin: "))
+
+print("Çift sayılar (while ile):")
+i = 2
+while i <= sayi:
+    print(i)
+    i += 2
+
+
+#cevap_3
+baslangic = int(input("Başlangıç değerini girin: "))
+bitis = int(input("Bitiş değerini girin: "))
+
+print("Sayılar:")
+for i in range(baslangic, bitis + 1):
+    print(i)
+
+#cevap_4
+cevap_4
+sayi = int(input("Bir sayı girin: "))
+
+if sayi % 2:
+    print("Girdiğiniz sayı tektir.")
+else:
+    print("Girdiğiniz sayı çifttir.")
+
+
+cevap_5
+sayi = int(input("Kullanıcıdan bir sayı girin: "))
+
+# Faktöriyel hesaplama
+faktoriyel = 1
+for i in range(1, sayi + 1):
+    faktoriyel *= i
+
+print("Faktöriyel:", faktoriyel)
+
+
+cevap_6
+sayi = int(input("Bir sayı girin: "))
+
+# Asal sayı kontrolü
+if sayi > 1:
+    for i in range(2, int(sayi ** 0.5) + 1):
+        if (sayi % i) == 0:
+            print(sayi, "asal değildir.")
+            break
+    else:
+        print(sayi, "asaldır.")
+else:
+    print(sayi, "asal değildir.")
+
+
+cevap_7
+sinir = int(input("Bir sınır değeri girin: "))  # Fibonacci dizisinin hesaplanacağı sınır değeri
+
+fibonacci = [0, 1]  # Fibonacci dizisinin ilk iki elemanı
+
+# Fibonacci dizisini hesaplayan döngü
+while fibonacci[-1] + fibonacci[-2] <= sinir:
+    fibonacci.append(fibonacci[-1] + fibonacci[-2])
+
+print("Fibonacci dizisi:", fibonacci)
+
+
+cevap_8
+kelime = input("Bir kelime girin: ")
+
+ters_kelime = kelime[::-1]
+
+print("Kelimenin tersi:", ters_kelime)
+
+
+cevap_9
+kelime = input("Bir kelime girin: ")
+
+ters_kelime = kelime[::-1]
+
+if kelime == ters_kelime:
+    print("Girdiğiniz kelime bir palindromdur.")
+else:
+    print("Girdiğiniz kelime bir palindrom değildir.")
+
+
+cevap_10
+kilo = float(input("Kilonuzu kilogram cinsinden girin: "))
+boy = float(input("Boyunuzu metre cinsinden girin: "))
+
+kilo_indeksi = kilo / (boy ** 2)
+
+if kilo_indeksi < 25:
+    print("Kilo indeksiniz:", kilo_indeksi)
+    print("Zayıfsınız.")
+elif 25 <= kilo_indeksi < 30:
+    print("Kilo indeksiniz:", kilo_indeksi)
+    print("Normalsiniz.")
+elif 30 <= kilo_indeksi < 40:
+    print("Kilo indeksiniz:", kilo_indeksi)
+    print("Kilolusunuz.")
+else:
+    print("Kilo indeksiniz:", kilo_indeksi)
+    print("Aşırı kilolusunuz.")
+
+cevap_11
+sayi1 = float(input("Birinci sayıyı girin: "))
+sayi2 = float(input("İkinci sayıyı girin: "))
+sayi3 = float(input("Üçüncü sayıyı girin: "))
+
+en_buyuk = max(sayi1, sayi2, sayi3)
+
+print("En büyük sayı:", en_buyuk)
+
+
+cevap_12
+for i in range(4):  # 4 ders için döngü oluşturuluyor
+    print(f"\n{i+1}. ders için notları girin:")
+    vize_notu = float(input("Vize notunu girin: "))
+    final_notu = float(input("Final notunu girin: "))
+
+    # Ortalama hesaplanıyor
+    yil_sonu_ortalama = (vize_notu * 0.4) + (final_notu * 0.6)
+
+    # Duruma göre çıktı veriliyor
+    if yil_sonu_ortalama >= 50:
+        print("BAŞARILI")
+    else:
+        print("BAŞARISIZ")
